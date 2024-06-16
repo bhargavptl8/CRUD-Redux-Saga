@@ -1,0 +1,44 @@
+:root{
+  --primary-color : #009c62;
+  --secondary-color : #dcfaee;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7bcbae;
+}
+
+.primary-bgcolor{
+    background-color: var(--primary-color)!important;
+}
+
+.secondary-bgcolor{
+  background-color: var(--secondary-color)!important;
+}
+
+.primary-color{
+    color: var(--primary-color)!important;
+}
+
+.fw-lighter{
+  font-weight: lighter;
+}
+
+.search .MuiOutlinedInput-notchedOutline{
+    border: none;
+}
+
+.searchBox{
+  transition: 0.5s;
+}
+
+.searchBox:hover{
+  background-color: rgba(255, 255, 255, 0.25);
+} 
