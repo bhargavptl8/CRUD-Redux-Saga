@@ -2,6 +2,9 @@ import React from 'react'
 import ReduxSagaCrud from './pages/ReduxSagaCrud'
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const App = () => {
 
   const theme = createTheme({
@@ -31,9 +34,21 @@ const App = () => {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <CssBaseline/>
+        <CssBaseline />
         <ReduxSagaCrud />
       </ThemeProvider>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   )
 }

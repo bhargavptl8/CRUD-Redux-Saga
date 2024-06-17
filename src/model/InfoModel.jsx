@@ -7,6 +7,8 @@ import { dataFetch } from '../redux-saga/actions';
 
 import { RiCloseCircleLine } from "react-icons/ri";
 
+import { toast } from 'react-toastify';
+
 const ModelStyle = {
     position: 'absolute',
     top: '50%',
@@ -66,9 +68,13 @@ const InfoModel = ({ open, setOpen, updateData, setUpdateData, updateId, setUpda
                 dispatch(dataFetch(copyData))
 
                 setUpdateId(null)
+
+                toast.success('Info Update Successfully')
             }
             else {
+
                 dispatch(dataFetch([...data, newData]))
+                toast.success('Info Add Successfully')
             }
 
             resetForm()

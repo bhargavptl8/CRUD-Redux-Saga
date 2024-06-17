@@ -9,6 +9,7 @@ import { FiEdit } from "react-icons/fi";
 import { MdDelete } from "react-icons/md";
 import { IoSearch } from "react-icons/io5";
 
+import { toast } from 'react-toastify';
 
 const ReduxSagaCrud = () => {
 
@@ -60,8 +61,10 @@ const ReduxSagaCrud = () => {
         let copyData = [...data]
 
         copyData.splice(index, 1)
-
+        
         dispatch(dataFetch(copyData))
+        
+        toast.success('Info Delete Successfully')
     }
 
     return (
